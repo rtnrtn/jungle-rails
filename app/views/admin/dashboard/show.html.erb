@@ -1,2 +1,27 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin &raquo; Dashboard</h1>
+
+<div class="panel panel-default products">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th colspan="2">Number of Products</th>
+        <th>Number of Categories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <%= @product_count %>
+        </td>
+        <td>
+          <%= @category_count %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <%= link_to "Visit the product admin page", admin_root_path %> or visit a category: 
+  <% @categories.each_with_index do |category,i| %>
+    <%= link_to category.name, category_path(category.id) %><%= i == @categories.length - 1 ? "." : "," %>
+  <% end %>
