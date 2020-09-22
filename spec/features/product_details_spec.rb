@@ -25,7 +25,7 @@ RSpec.feature "Visitor navigates to product details page", type: :feature, js: t
     find('section.products-show')
 
     # DEBUG 
-    save_screenshot
+    # save_screenshot
 
     # VERIFY
     expect(page).to have_css 'section.products-show', count: 1
