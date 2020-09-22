@@ -24,7 +24,7 @@ RSpec.feature "Visitor adds item to cart from home page", type: :feature, js: tr
     find_link('My Cart')
 
     # DEBUG 
-    save_screenshot
+    # save_screenshot
 
     # VERIFY
     expect(page).to have_text 'My Cart (1)'
